@@ -1,10 +1,14 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
-import { EcsFargateDemoStack } from '../lib/ecs-fargate-demo-stack';
+import { EcsFargateAlbDemoStack } from '../lib/ecs-fargate-alb-demo-stack';
+import {EcsFargateAlbLoggingDemoStack} from "../lib/ecs-fargate-alb-logging-demo-stack";
+import {
+    EcsFargateAlbLoggingServiceDiscoveryDemoStack
+} from "../lib/ecs-fargate-alb-logging-service-discovery-demo-stack";
 
 const app = new cdk.App();
-new EcsFargateDemoStack(app, 'EcsFargateDemoStack', {
+new EcsFargateAlbLoggingServiceDiscoveryDemoStack(app, 'EcsFargateDemoStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
