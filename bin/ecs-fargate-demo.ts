@@ -6,9 +6,10 @@ import {EcsFargateAlbLoggingDemoStack} from "../lib/ecs-fargate-alb-logging-demo
 import {
     EcsFargateAlbLoggingServiceDiscoveryDemoStack
 } from "../lib/ecs-fargate-alb-logging-service-discovery-demo-stack";
+import {EcsFargateDemoStack} from "../lib/ecs-fargate-demo-stack";
 
 const app = new cdk.App();
-new EcsFargateAlbDemoStack(app, 'EcsFargateDemoStack', {
+new EcsFargateDemoStack(app, 'EcsFargateDemoStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
